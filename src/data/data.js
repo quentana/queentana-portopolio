@@ -192,7 +192,7 @@ export const projects = [
  {
   id: 5,
   title: 'Undagan-Khitan| DIgital',
-  desc: 'Undagan Khitan Digital online. Untuk Mengundang Secara digital,',
+  desc: 'Website undangan khitan digital dengan desain modern dan responsif. Memudahkan penyebaran informasi acara secara online dengan tampilan yang elegan dan mudah diakses.',
   tech: ['HTML', 'CSS', 'JavaScript'],
   github : 'https://github.com/quentana/undangan-khitan',
   demo:'https://quentana.github.io/undangan-khitan/',
@@ -202,10 +202,10 @@ export const projects = [
  {
   id: 6,
   title: 'Penghitung Berat Badan ',
-  desc: 'Undagan Khitan Digital online. Untuk Mengundang Secara digital,',
+  desc: 'Aplikasi penghitung IMT/BMI berdasarkan tinggi dan berat badan. Membantu pengguna mengetahui kategori berat badan dengan cepat dan mudah.',
   tech: ['PHP', 'CSS'],
   github : 'https://github.com/quentana/sas-pplg',
-  demo:'https://quentana.github.io/undangan-khitan/',
+  demo:'https://github.com/quentana/sas-pplg',
   image: '/project/project6.png',
   bg:  '#f5f0ff',
  }
