@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+  }
+  body {
+    background-color: #FAFAF7;
+    color: #1A1410;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: #C9A87C;
+    color: #FAFAF7;
+  }
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+
+  /* ── Reveal animation ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: #ffffff;
+    border: 1px solid #E8DDD0;
+    border-radius: 4px;
+    padding: 28px;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .card:hover {
+    box-shadow: 0 8px 32px rgba(139, 102, 53, 0.12);
+    border-color: #C9A87C;
+  }
+
+  /* ── Tags ── */
+  .tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    background: #F5F0E8;
+    border: 1px solid #DFC9A8;
+    color: #6E4E22;
+    padding: 3px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #6E4E22;
+    color: #FAFAF7;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    padding: 12px 28px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover {
+    background: #53381A;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #6E4E22;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    padding: 11px 26px;
+    border-radius: 2px;
+    border: 1.5px solid #C9A87C;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-ghost:hover {
+    background: #F5F0E8;
+    transform: translateY(-1px);
+  }
+
+  /* ── Skill bar ── */
+  .skill-track {
+    height: 2px;
+    background: #E8DDD0;
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .skill-fill {
+    height: 100%;
+    border-radius: 1px;
+    background: #8B6635;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.3s cubic-bezier(.4,0,.2,1);
+  }
+  .skill-fill.go {
+    transform: scaleX(1);
+  }
+
+  /* ── Inputs ── */
+  .input {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #E8DDD0;
+    border-radius: 2px;
+    padding: 12px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #1A1410;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .input::placeholder { color: #C9A87C; opacity: 0.8; }
+  .input:focus {
+    border-color: #8B6635;
+    box-shadow: 0 0 0 3px rgba(139, 102, 53, 0.12);
+  }
+  .input.err {
+    border-color: #c0392b;
+  }
+
+  /* ── Divider line ── */
+  .divider {
+    display: block;
+    width: 40px;
+    height: 1.5px;
+    background: #8B6635;
+    margin-bottom: 12px;
+  }
+
+  /* ── Section label ── */
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8B6635;
+  }
+}
