@@ -2,8 +2,29 @@ import { useEffect, useRef } from 'react'
 import { skills, tools, softSkills } from '../data/data'
 import Container from '../components/Container'
 import SectionTitle from '../components/SectionTitle'
+import { FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa'
+import { SiCanva } from 'react-icons/si'
+import { 
+  SiJavascript, 
+  SiPhp, 
+  SiFigma, 
+  SiFlutter, 
+  SiLaravel,
+} from 'react-icons/si'
 
-const SkillBar = ({ name, level, desc, index }) => {
+const iconMap = {
+  FaHtml5: <FaHtml5 size={28} />,
+  FaCss3Alt: <FaCss3Alt size={28} />,
+  FaReact: <FaReact size={28} />,
+  SiJavascript: <SiJavascript size={28} />,
+  SiAdobephotoshop: <SiCanva size={28} />,
+  SiPhp: <SiPhp size={28} />,
+  SiFigma: <SiFigma size={28} />,
+  SiFlutter: <SiFlutter size={28} />,
+  SiLaravel: <SiLaravel size={28} />,
+}
+
+const SkillBar = ({ name, level, desc, icon, index }) => {
   const fillRef = useRef(null)
 
   useEffect(() => {
@@ -24,6 +45,7 @@ const SkillBar = ({ name, level, desc, index }) => {
     <div className="skill-row py-4 border-b border-brown-100 last:border-0">
       <div className="flex items-start justify-between mb-3">
         <div>
+          <div className="text-brown-500 mb-1">{iconMap[icon]}</div>
           <div className="font-semibold text-ink text-sm">{name}</div>
           <div className="text-faint text-xs leading-relaxed mt-0.5 max-w-xs">{desc}</div>
         </div>
