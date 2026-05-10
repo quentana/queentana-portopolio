@@ -63,7 +63,7 @@ const Contact = () => {
 
   const contactItems = [
     { Icon: Mail,      href: `mailto:${profile.email}`, label: 'Email',     value: profile.email },
-    { Icon: Phone,     href: profile.whatsapp,           label: 'WhatsApp',  value: '+62 895-3218-35733' },
+    { Icon: Phone,     href: profile.whatsapp,           label: 'WhatsApp',  value: '+62 895-3210-73832' },
     { Icon: MapPin,    href: null,                        label: 'Lokasi',    value: profile.location },
     { Icon: Instagram, href: profile.instagram,           label: 'Instagram', value: '@queentana_' },
     { Icon: Linkedin,  href: profile.linkedin,            label: 'LinkedIn',  value: 'Queentana Allea Hasanah' },
