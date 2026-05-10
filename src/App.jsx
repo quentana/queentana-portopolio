@@ -7,11 +7,16 @@ import Education    from './sections/Education'
 import Projects     from './sections/Projects'
 import Certificates from './sections/Certificates'
 import Contact      from './sections/Contact'
+import MusicPlayer from './components/MusicPlayer'
+
+// lalu taruh di dalam return:
+
 
 const App = () => {
   return (
     <>
       <Navbar />
+           <MusicPlayer />
       <main>
         <Hero />
         <About />
