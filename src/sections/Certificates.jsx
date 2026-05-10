@@ -15,16 +15,13 @@ const Modal = ({ cert, onClose, onPrev, onNext, total, current }) => {
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       style={{ background: 'rgba(26,20,16,0.75)', backdropFilter: 'blur(6px)' }}
-      onClick={onClose}
-    >
+      onClick={onClose}>
       <div
         className="relative bg-white max-w-lg w-full p-8"
-        onClick={(e) => e.stopPropagation()}
-      >
+        onClick={(e) => e.stopPropagation()}>
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 w-8 h-8 border border-brown-200 flex items-center justify-center text-muted hover:text-brown-600 hover:border-brown-400 transition-colors"
-        >
+          className="absolute top-5 right-5 w-8 h-8 border border-brown-200 flex items-center justify-center text-muted hover:text-brown-600 hover:border-brown-400 transition-colors">
           <X size={15} />
         </button>
 
@@ -53,6 +50,7 @@ const Modal = ({ cert, onClose, onPrev, onNext, total, current }) => {
 
 const Certificates = () => {
   const ref = useRef(null)
+  const scrollRef = useRef(null)
   const [selected, setSelected] = useState(null)
 
   useEffect(() => {
@@ -68,6 +66,9 @@ const Certificates = () => {
   const closeModal = () => { setSelected(null); document.body.style.overflow = '' }
   const prevCert   = () => setSelected(i => (i - 1 + certificates.length) % certificates.length)
   const nextCert   = () => setSelected(i => (i + 1) % certificates.length)
+
+  const scrollPrev = () => scrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' })
+  const scrollNext = () => scrollRef.current?.scrollBy({ left: 300, behavior: 'smooth' })
 
   return (
     <>
@@ -85,14 +86,16 @@ const Certificates = () => {
             <p className="font-mono text-xs text-faint tracking-wider">Klik kartu sertifikat untuk melihat lebih detail</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div
+            ref={scrollRef}
+            className="flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
             {certificates.map((cert, i) => (
               <div
                 key={cert.id}
-                className="reveal cursor-pointer group bg-white border border-brown-100 hover:border-brown-300 transition-all"
+                className="reveal cursor-pointer group bg-white border border-brown-100 hover:border-brown-300 transition-all flex-none w-72 snap-center"
                 style={{ transitionDelay: `${i * 65}ms` }}
-                onClick={() => openModal(i)}
-              >
+                onClick={() => openModal(i)}>
                 <div className="overflow-hidden border-b border-brown-100">
                   <img
                     src={cert.image}
@@ -115,6 +118,21 @@ const Certificates = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="flex items-center justify-end gap-2 mt-4">
+            <button
+              onClick={scrollPrev}
+              className="w-8 h-8 border border-brown-200 flex items-center justify-center text-muted hover:text-brown-600 hover:border-brown-400 transition-colors"
+            >
+              <ChevronLeft size={15} />
+            </button>
+            <button
+              onClick={scrollNext}
+              className="w-8 h-8 border border-brown-200 flex items-center justify-center text-muted hover:text-brown-600 hover:border-brown-400 transition-colors"
+            >
+              <ChevronRight size={15} />
+            </button>
           </div>
         </Container>
       </section>

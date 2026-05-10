@@ -156,7 +156,7 @@ const Contact = () => {
                       <input
                         type="email" name="email" value={form.email}
                         onChange={handleChange} onBlur={handleBlur}
-                        placeholder="email@kamu.com"
+                        placeholder="email@gmail.com"
                         className={ic('email')}
                       />
                       {errors.email && touched.email && (
