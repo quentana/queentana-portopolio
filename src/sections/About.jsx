@@ -67,22 +67,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="reveal" style={{ transitionDelay: '200ms' }}>
-          <h3 className="font-display text-2xl font-semibold text-ink mb-8">Yang Bisa Saya Bantu</h3>
-          <div className="grid sm:grid-cols-3 gap-0 border border-brown-200">
-            {services.map((s, i) => (
-              <div key={s.title} className={`p-8 bg-white hover:bg-brown-50 transition-colors ${i < 2 ? 'border-r border-brown-200' : ''}`}>
-                <div className="w-10 h-10 border border-brown-300 flex items-center justify-center mb-5">
-                  <span className="font-mono text-xs text-brown-600 font-medium">
-                    {i === 0 ? 'GD' : i === 1 ? 'UX' : 'FE'}
-                  </span>
-                </div>
-                <h4 className="font-semibold text-ink text-base mb-3">{s.title}</h4>
-                <p className="text-muted text-sm leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+   
       </Container>
     </section>
   )

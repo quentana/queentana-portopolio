@@ -39,9 +39,9 @@ export const skills = [
     emoji: '🌐',
   },
   {
-    name: 'CSS3',
+    name: 'CSS',
     level: 85,
-    desc: 'Expert dalam CSS3, Flexbox, Grid, animations, dan responsive design. Juga menguasai preprocessor seperti SASS.',
+    desc: 'Expert dalam CSS, Flexbox, Grid, animations, dan responsive design. Juga menguasai preprocessor seperti SASS.',
     emoji: '🎨',
   },
   {

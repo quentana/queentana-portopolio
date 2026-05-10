@@ -83,7 +83,7 @@ const Education = () => {
             <div className="reveal border border-brown-200 bg-white p-6 mt-10" style={{ transitionDelay: '300ms' }}>
               <div className="font-mono text-xs text-faint tracking-widest uppercase mb-5">Sedang Dipelajari</div>
               <div className="flex flex-wrap gap-2">
-                {['React.js', 'Tailwind CSS', 'JavaScript ES6+', 'Git & GitHub'].map(t => (
+                {['React.js', 'Tailwind CSS', 'JavaScript ES6+', 'Git & GitHub', 'Flutter','Laravel','Express.js','Node.js'].map(t => (
                   <span key={t} className="tag">{t}</span>
                 ))}
               </div>
