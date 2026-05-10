@@ -35,9 +35,9 @@ const Hero = () => {
 
   const socials = [
     { Icon: Instagram, href: profile.instagram, label: 'Instagram' },
-    { Icon: Linkedin,  href: profile.linkedin,  label: 'LinkedIn'  },
-    { Icon: Phone,     href: profile.whatsapp,  label: 'WhatsApp'  },
-    { Icon: Music,     href: profile.spotify,   label: 'Spotify'   },
+    { Icon: Linkedin, href: profile.linkedin, label: 'LinkedIn' },
+    { Icon: Phone, href: profile.whatsapp, label: 'WhatsApp' },
+    { Icon: Music, href: profile.spotify, label: 'Spotify' },
   ]
 
   return (
@@ -102,27 +102,27 @@ const Hero = () => {
 
           {/* Right side — decorative identity card */}
           <div className="flex justify-center lg:justify-end">
-  <div className="relative w-72">
-    {/* Main card */}
-    <div className="bg-white border border-brown-200 p-4 relative">
-      {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brown-400" />
-      <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-brown-400" />
-      <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-brown-400" />
-      <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-brown-400" />
+            <div className="relative w-72">
+              {/* Main card */}
+              <div className="bg-white border border-brown-200 p-4 relative">
+                {/* Corner accents */}
+                <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-brown-400" />
+                <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-brown-400" />
+                <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-brown-400" />
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-brown-400" />
 
-      {/* Foto */}
-      <img
-        src="/foto-saya.png"
-        alt="Profile"
-        className="w-full h-[400px] object-cover"
-      />
-    </div>
+                {/* Foto */}
+                <img
+                  src="/foto-saya.png"
+                  alt="Profile"
+                  className="w-full h-[400px] object-cover"
+                />
+              </div>
 
-    {/* Shadow card behind */}
-    <div className="absolute inset-0 border border-brown-200 translate-x-3 translate-y-3 -z-10 bg-brown-50" />
-  </div>
-</div>
+              {/* Shadow card behind */}
+              <div className="absolute inset-0 border border-brown-200 translate-x-3 translate-y-3 -z-10 bg-brown-50" />
+            </div>
+          </div>
         </div>
 
         <div className="flex justify-center mt-16">
