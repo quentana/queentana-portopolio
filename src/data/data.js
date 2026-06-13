@@ -226,6 +226,26 @@ export const projects = [
   demo:'https://github.com/quentana/sas-pplg',
   image: '/project/project6.png',
   bg:  '#f5f0ff',
+ },
+ {
+  id: 7,
+  title: 'Q_Fruits',
+  desc: 'Aplikasi Ecommerce buah-buahan yang di buat untuk masyarakat yang ingin membeli buah tanpa repot harus ke  pasar, eccomerce ini juga memberikan tambahan penjelasan buah yang detail.',
+  tech: ["Figma"],
+  figma : 'https://github.com/quentana/sas-pplg',
+  demo:'https://github.com/quentana/sas-pplg',
+  image: '/project/desain figma1.png',
+  bg:  '#f5f0ff',
+ },
+ {
+  id: 8,
+  title: 'Lensa pelajar',
+  desc: 'Aplikasi Lensa pelajar yang di rancang untuk website siswa,website ini dibangun dengan colaborasi tim dengan menyatukan  ide ide yang berbeda dan berujung dengan satu tema dan satu tujuan.',
+  tech: ["Figma"],
+  figma : 'https://www.figma.com/design/QCCCwxbBNZCKKzrn0siwP1/WireFrame-LensaPelajar?node-id=301-1143&t=ZXxgXZu8mXr9WUwG-1',
+  demo:'https://github.com/quentana/sas-pplg',
+  image: '/project/desain figma2.png',
+  bg:  '#f5f0ff',
  }
 ]
 

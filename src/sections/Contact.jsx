@@ -3,6 +3,7 @@ import { Send, Mail, Phone, MapPin, Instagram, Linkedin, CheckCircle, AlertCircl
 import { profile } from '../data/data'
 import Container from '../components/Container'
 import SectionTitle from '../components/SectionTitle'
+import emailjs from '@emailjs/browser';
 
 const INIT = { name: '', email: '', phone: '', message: '' }
 
@@ -49,15 +50,36 @@ const Contact = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const errs = validate(form)
-    setErrors(errs)
-    setTouched({ name: true, email: true, phone: true, message: true })
-    if (Object.keys(errs).length > 0) return
-    setStatus('loading')
-    await new Promise(r => setTimeout(r, 1600))
+  e.preventDefault()
+  const errs = validate(form)
+  setErrors(errs)
+  setTouched({ name: true, email: true, phone: true, message: true })
+  if (Object.keys(errs).length > 0) return
+  
+  setStatus('loading')
+
+  try {
+    // Ganti dengan Service ID, Template ID, dan Public Key dari dashboard EmailJS-mu
+    await emailjs.send(
+      'YOUR_SERVICE_ID', 
+      'YOUR_TEMPLATE_ID', 
+      {
+        from_name: form.name,
+        from_email: form.email,
+        phone: form.phone || 'Tidak dicantumkan',
+        message: form.message,
+        to_email: 'alleaqueentana@gmail.com' // Bisa juga diatur langsung di template EmailJS
+      },
+      'YOUR_PUBLIC_KEY'
+    );
+    
     setStatus('success')
+  } catch (error) {
+    console.error('Gagal mengirim email:', error)
+    setStatus('idle')
+    alert('Gagal mengirim pesan, silakan coba lagi atau hubungi via WhatsApp.')
   }
+}
 
   const ic = (field) => `input${errors[field] && touched[field] ? ' err' : ''}`
 
