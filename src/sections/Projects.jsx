@@ -34,7 +34,6 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <div ref={ref} className="reveal bg-white border border-brown-100 hover:border-brown-300 transition-all hover:shadow-lg hover:shadow-brown-100/50 flex flex-col group">
-
       {/* Thumbnail */}
       <div className="relative overflow-hidden border-b border-brown-100 bg-brown-50" style={{ aspectRatio: '16/9' }}>
         {hasImage ? (
@@ -42,8 +41,7 @@ const ProjectCard = ({ project, index }) => {
             src={project.image}
             alt={project.title}
             onError={() => setImgError(true)}
-            className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
-          />
+            className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"/>
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center gap-2 bg-brown-50">
             <div className="w-12 h-12 border border-brown-200 flex items-center justify-center">
@@ -139,8 +137,7 @@ const Projects = () => {
 
         <div
           className="reveal border border-brown-100 bg-white p-6 flex items-center justify-between flex-wrap gap-4"
-          style={{ transitionDelay: '260ms' }}
-        >
+          style={{ transitionDelay: '260ms' }}>
           <div>
             <div className="font-semibold text-ink text-sm">
               Ingin melihat lebih banyak?
@@ -155,8 +152,7 @@ const Projects = () => {
             href="https://github.com/quentana"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 btn-ghost text-sm"
-          >
+            className="inline-flex items-center gap-2 btn-ghost text-sm">
             <Github size={15} />
             github.com/quentana
           </a>

@@ -36,8 +36,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <button
                     onClick={() => go(link.href)}
-                    className="text-white/60 hover:text-white text-sm transition-colors"
-                  >
+                    className="text-white/60 hover:text-white text-sm transition-colors">
                     {link.label}
                   </button>
                 </li>

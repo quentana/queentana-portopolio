@@ -3,6 +3,9 @@ import { Play, Pause, SkipBack, SkipForward, Volume2, VolumeX, Music2, ChevronLe
 
 const playlist = [
   { title: 'Do I Wanna Know?', artist: 'Arctic Monkeys', src: '/music/do-i-wanna-know.mp3', cover: null },
+  { title: 'The Fate of Ophelia ', artist: 'Taylor swift', src: '/music/The Fate of Ophelia.mp3', cover: null },
+  { title: 'So Easy', artist:'Olive', src:'/music/So Easy.mp3', cover: null},
+  { title: 'In another life I would be your girl', artist:'katty pery', src:'/music/In another life I would be your girl.mp3', cover: null},
 ]
 
 const formatTime = (s) => {

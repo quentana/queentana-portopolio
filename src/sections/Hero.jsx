@@ -129,8 +129,7 @@ const Hero = () => {
           <button
             onClick={() => go('about')}
             className="flex flex-col items-center gap-2 text-faint hover:text-brown-500 transition-colors group"
-            aria-label="Scroll ke bawah"
-          >
+            aria-label="Scroll ke bawah">
             <span className="font-mono text-xs tracking-widest">SCROLL</span>
             <ArrowDown size={14} className="animate-bounce" />
           </button>

@@ -49,15 +49,15 @@ const SkillBar = ({ name, level, desc, icon, index }) => {
           <div className="font-semibold text-ink text-sm">{name}</div>
           <div className="text-faint text-xs leading-relaxed mt-0.5 max-w-xs">{desc}</div>
         </div>
-        <span className="font-mono text-brown-500 text-xs font-medium flex-shrink-0 ml-4 mt-0.5">{level}%</span>
+        {/* <span className="font-mono text-brown-500 text-xs font-medium flex-shrink-0 ml-4 mt-0.5">{level}%</span> */}
       </div>
-      <div className="skill-track">
+      {/* <div className="skill-track">
         <div
           ref={fillRef}
           className="skill-fill"
           style={{ '--target-scale': level / 100 }}
         />
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -112,13 +112,6 @@ const Skills = () => {
               ))}
             </div>
           </div>
-        </div>
-
-        <div className="reveal mt-10 border-l-2 border-brown-300 pl-5 py-1" style={{ transitionDelay: '300ms' }}>
-          <p className="text-muted text-sm leading-relaxed italic">
-            <span className="font-semibold not-italic text-ink">Catatan jujur:</span>{' '}
-            Persentase di atas mencerminkan kemampuan saya saat ini secara apa adanya. Saya percaya transparansi lebih penting dari kesan sempurna. Masih banyak yang ingin saya tingkatkan.
-          </p>
         </div>
       </Container>
     </section>
